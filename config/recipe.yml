@@ -26,10 +26,11 @@ modules:
     install:
       # - micro
       # - starship
+      - gnome-boxes
     remove:
       # - firefox # default firefox removed in favor of flatpak
       # - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - ddccontrol
+      # - ddccontrol
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -52,7 +53,7 @@ modules:
     custom-flatpaks: # this section is optional
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
-      - Firefox: org.mozilla.firefox
+      # - Firefox: org.mozilla.firefox
 
   - type: script
     scripts:

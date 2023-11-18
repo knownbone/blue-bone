@@ -27,7 +27,7 @@ modules:
       # - micro
       # - starship
       - adwaita-gtk2-theme
-      - ublue-update
+      # - ublue-update
       - solaar
       - yaru-gtk2-theme
       - yaru-gtk3-theme
@@ -41,7 +41,7 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - gnome-software-rpm-ostree
       - gnome-tour
-      - ublue-os-update-services
+      # - ublue-os-update-services
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:

@@ -26,7 +26,11 @@ modules:
     install:
       # - micro
       # - starship
+      - bash-color-prompt
       - adwaita-gtk2-theme
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-blur-my-shell
+      - gnome-shell-extension-dash-to-dock
       # - ublue-update
       - solaar
       - yaru-gtk2-theme

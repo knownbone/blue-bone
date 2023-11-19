@@ -31,7 +31,6 @@ modules:
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-blur-my-shell
       - gnome-shell-extension-dash-to-dock
-      # - ublue-update
       - solaar
       - yaru-gtk2-theme
       - yaru-gtk3-theme
@@ -45,7 +44,6 @@ modules:
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
       - gnome-software-rpm-ostree
       - gnome-tour
-      # - ublue-os-update-services
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:
@@ -53,7 +51,7 @@ modules:
                   # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers
       - ublue-os-wallpapers
-      # - ublue-update # https://github.com/ublue-os/ublue-update
+      - ublue-update # https://github.com/ublue-os/ublue-update
       # - 1password # install 1Password (stable) and `op` CLI tool
       # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
@@ -68,9 +66,9 @@ modules:
     custom-flatpaks: # this section is optional
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
-      # - Firefox: org.mozilla.firefox
 
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
+      - starship.sh
       - signing.sh

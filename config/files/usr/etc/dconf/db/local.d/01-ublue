@@ -12,7 +12,7 @@ secondary-color='FFFFFF'
 [org/gnome/desktop/interface]
 enable-hot-corners=false
 clock-show-weekday=true
-cursor-theme="Yaru"
+cursor-theme="Capitaine (Light)"
 icon-theme="Yaru"
 gtk-theme="Yaru"
 font-antialiasing="rgba"
@@ -55,6 +55,9 @@ max-alpha=0.8
 min-alpha=0.5
 running-indicator-style='DOTS'
 
+[org/gnome/shell/extensions/user-theme]
+name='Yaru'
+
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Control><Alt>t'
 command='gnome-terminal'
@@ -62,8 +65,8 @@ name='gnome-terminal'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
 binding='<Control><Alt>u'
-command='flatpak run com.raggesilver.BlackBox --command "distrobox enter ubuntu"'
-name='blackbox ubuntu'
+command='gnome-terminal -- bash -c "distrobox enter ubuntu"'
+name='ubuntu'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
 binding='<Control><Shift>Escape'

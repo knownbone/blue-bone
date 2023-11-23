@@ -27,11 +27,14 @@ modules:
     install:
       # - micro
       # - starship
-      - bash-color-prompt
+      # - bash-color-prompt
       - adwaita-gtk2-theme
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-blur-my-shell
       - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-user-theme
+      - gnome-shell-theme-yaru
+      - highcontrast-icon-theme
       - solaar
       - yaru-gtk2-theme
       - yaru-gtk3-theme
@@ -44,7 +47,6 @@ modules:
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - gnome-software-rpm-ostree
       - gnome-tour
 
   - type: bling # configure what to pull in from ublue-os/bling

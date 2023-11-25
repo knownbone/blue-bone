@@ -1,10 +1,10 @@
 # image will be published to ghcr.io/<user>/<name>
 name: blue-bone
 # description will be included in the image's metadata
-description: My custom uBlue image. Make your own -> https://universal-blue.org/tinker/make-your-own/
+description: My custom uBlue image. You can make your own -> https://universal-blue.org/tinker/make-your-own/
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-nvidia
+base-image: ghcr.io/ublue-os/bluefin-dx-nvidia
 image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -23,36 +23,36 @@ modules:
   - type: rpm-ostree
     repos:
       # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+      # - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
     install:
       # - micro
       # - starship
       # - bash-color-prompt
-      - adwaita-gtk2-theme
-      - gnome-shell-extension-appindicator
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-user-theme
-      - gnome-shell-theme-yaru
-      - highcontrast-icon-theme
-      - solaar
-      - yaru-gtk2-theme
-      - yaru-gtk3-theme
-      - yaru-gtk4-theme
-      - yaru-gtksourceview-theme
-      - yaru-icon-theme
-      - yaru-sound-theme
-      - yaru-theme
-      - nerd-fonts
-      - yubikey-manager
-      - yubikey-manager-qt
-      - yubikey-personalization-gui
-      - pam_yubico
+      # - adwaita-gtk2-theme
+      # - gnome-shell-extension-appindicator
+      # - gnome-shell-extension-blur-my-shell
+      # - gnome-shell-extension-dash-to-dock
+      # - gnome-shell-extension-user-theme
+      # - gnome-shell-theme-yaru
+      # - highcontrast-icon-theme
+      # - solaar
+      # - yaru-gtk2-theme
+      # - yaru-gtk3-theme
+      # - yaru-gtk4-theme
+      # - yaru-gtksourceview-theme
+      # - yaru-icon-theme
+      # - yaru-sound-theme
+      # - yaru-theme
+      # - nerd-fonts
+      # - yubikey-manager
+      # - yubikey-manager-qt
+      # - yubikey-personalization-gui
+      # - pam_yubico
 
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-      - gnome-tour
+      # - gnome-tour
 
   - type: bling # configure what to pull in from ublue-os/bling
     install:      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/at
@@ -60,9 +60,9 @@ modules:
                   # in your custom.just (added by default) or local justfile
       - nix-installer # shell shortcuts for determinate system's nix installers      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/at
       - ublue-os-wallpapers
-      - ublue-update # https://github.com/ublue-os/ublue-update
+      # - ublue-update # https://github.com/ublue-os/ublue-update
       # - 1password # install 1Password (stable) and `op` CLI tool
-      - dconf-update-service # a service unit that updates the dconf db on boot
+      # - dconf-update-service # a service unit that updates the dconf db on boot
       # - devpod # https://devpod.sh/ as an rpm
       # - gnome-vrr # enables gnome-vrr for your image
       # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
@@ -78,5 +78,5 @@ modules:
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
-      - recipe.sh
+      # - recipe.sh
       - signing.sh
